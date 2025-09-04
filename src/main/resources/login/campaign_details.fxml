@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="864.0" prefWidth="1296.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER" prefHeight="108.0" prefWidth="1296.0" styleClass="backgroundColor" stylesheets="@css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagefiles/onlytree.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagefiles/givingtreelogotext.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="121.0" prefWidth="699.0">
+               <children>
+                  <MenuBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="504.0" stylesheets="@css/styles.css">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="Home">
+                           <items>
+                              <MenuItem fx:id="Home" mnemonicParsing="false" onAction="#goToHomepage" text="Home" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Campaigns">
+                           <items>
+                              <MenuItem fx:id="Explore" mnemonicParsing="false" onAction="#explore" text="Explore" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="YourCampaign" mnemonicParsing="false" onAction="#goTomycampaign" text="Your Campaigns" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="DonatedCampaign" mnemonicParsing="false" onAction="#goTomydonatedcampaigns" text="Campaigns you donated to" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help &amp; Support">
+                           <items>
+                              <MenuItem fx:id="HelpAndSupport" mnemonicParsing="false" onAction="#goToHelpAndSupport" text="Help &amp; Support" />
+                           </items>
+                        </Menu>
+                     </menus>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </MenuBar>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="121.0" prefWidth="247.0">
+               <children>
+                  <MenuBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="33.0" prefWidth="283.0">
+                     <menus>
+                        <Menu fx:id="profile" mnemonicParsing="false" text="Profile">
+                           <items>
+                              <MenuItem fx:id="MyProfile" mnemonicParsing="false" onAction="#goToProfile" text="My Profile" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="LogoutMenuItem" mnemonicParsing="false" onAction="#logout" text="Logout" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="114.0" prefWidth="1296.0" styleClass="backgroundColor" stylesheets="@css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="89.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagefiles/givingtreelogo.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="helpDesk" maxHeight="25.0" maxWidth="400.0" minHeight="10.0" minWidth="168.0" mnemonicParsing="false" onAction="#contactAdmin" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: transparent;" text="Help Desk" />
+                        <Button maxHeight="25.0" maxWidth="400.0" minHeight="10.0" minWidth="168.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: transparent;" text="About Us" />
+                        <Button maxHeight="25.0" maxWidth="400.0" minHeight="10.0" minWidth="168.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" style="-fx-background-color: transparent;" text="Terms &amp; Conditions" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="backgroundColor2" stylesheets="@css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="629.0" prefWidth="543.0">
+               <children>
+                  <Label fx:id="title" text="Campaign Name Here">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ImageView fx:id="campaignView" fitHeight="269.0" fitWidth="451.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="629.0" prefWidth="543.0">
+               <children>
+                  <TextFlow fx:id="campdescription" prefHeight="277.0" prefWidth="543.0" styleClass="text-flow" stylesheets="@css/styles.css" textAlignment="JUSTIFY">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </VBox.margin>
+                  </TextFlow>
+                  <Label fx:id="goalDisplay" text="৳25 raised of ৳1,000 goal">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="DonationPayment" maxWidth="300.0" minWidth="300.0" mnemonicParsing="false" onAction="#goToDonationPayment" prefHeight="40.0" prefWidth="400.0" styleClass="backgroundColor" stylesheets="@css/styles.css" text="Donate Now" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

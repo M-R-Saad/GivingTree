@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="864.0" prefWidth="1296.0" styleClass="backgroundColor" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.Notifications_Controller">
+   <children>
+      <ScrollPane fx:id="scrollPane" layoutX="98.0" layoutY="224.0" prefHeight="550.0" prefWidth="1100.0">
+         <content>
+            <VBox fx:id="vBox_notification" prefHeight="530.0" prefWidth="1080.0" />
+         </content>
+      </ScrollPane>
+      <MenuBar layoutX="375.0" layoutY="170.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="600.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Home">
+               <items>
+                  <MenuItem fx:id="Home" mnemonicParsing="false" onAction="#goToHome" text="Home" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Campaigns">
+               <items>
+                  <MenuItem fx:id="Explore" mnemonicParsing="false" text="Explore" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="YourCampaign" mnemonicParsing="false" text="Your Campaigns" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="DonatedCampaign" mnemonicParsing="false" text="Campaigns you donated to" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Profile">
+               <items>
+                  <MenuItem fx:id="MyProfile" mnemonicParsing="false" onAction="#goToProfile" text="My Profile" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="UpdateProfile" mnemonicParsing="false" onAction="#goToUpdateProfile" text="Update Profile" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help &amp; Support">
+               <items>
+                  <MenuItem fx:id="HelpAndSupport" mnemonicParsing="false" text="Help &amp; Support" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Log Out">
+               <items>
+                  <MenuItem fx:id="LogOut" mnemonicParsing="false" onAction="#logout" text="Log Out" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Exit">
+               <items>
+                  <MenuItem fx:id="Exit" mnemonicParsing="false" onAction="#exit" text="Exit" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fitHeight="110.0" fitWidth="114.0" layoutX="593.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../donationtracker-master2/src/main/resources/login/imagefiles/onlytree.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="180.0" layoutX="559.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../donationtracker-master2/src/main/resources/login/imagefiles/givingtreelogotext.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
